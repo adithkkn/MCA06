@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+ <xs:element name="Company">
+ <xs:complexType>
+ <xs:sequence>
+ <xs:element maxOccurs="unbounded" name="Employee">
+ <xs:complexType>
+ <xs:equence>
+ <xs:element name="Emp_Name" type="xs:string" />
+ <xs:element name="Emp_Age" type="xs:integer" />
+ <xs:element name="Emp_Salary" type="xs:Int" />
+ <xs:element name="Emp_email" type="xs:string" />
+ <xs:element name="Emp_phonenum" type="xs:integer" />
+ <xs:element name="Emp_designation" type="xs:string" />
+ <xs:simpleType name="MySal">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="50000"></xs:minInclusive>
+<xs:maxInclusive value="200000"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="Tprice">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="100"></xs:minInclusive>
+<xs:maxInclusive value="10000"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+<xs:simpleType name="myAge">
+<xs:restriction base="xs:integer">
+<xs:minInclusive value="10"></xs:minInclusive>
+<xs:maxInclusive value="100"></xs:maxInclusive>
+</xs:restriction>
+</xs:simpleType>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:element>
+</xs:schema>
